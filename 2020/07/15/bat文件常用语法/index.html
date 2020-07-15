@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>bat文件常用语法 | Hexo</title>
+  <meta name="keywords" content=" -bat ">
+  <meta name="description" content="bat文件常用语法 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-15T21:01:57.000Z">
+<meta property="article:modified_time" content="2020-07-15T21:01:57.608Z">
+<meta property="article:author" content="Bo">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+</div>
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Bo</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:shaobo9856@hotmail.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="All">All<small>(4)</small></div></li>
+    
+        
+            
+            <li><div data-rel="SQL">SQL<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Others">Others<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">About</a><a style="width: 50%"  class="friends">Friends</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://www.baidu.com/">度娘</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>-bat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Shell</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="All Others "
+           href="/2020/07/15/%E7%AC%AC%E4%BA%8C%E7%AF%87/"
+           data-tag="Shell"
+           data-author="" >
+            <span class="post-title" title="第二篇博文">第二篇博文</span>
+            <span class="post-date" title="2020-07-15 22:55:15">2020/07/15</span>
+        </a>
+        
+        <a  class="All Others "
+           href="/2020/07/15/hexo%E8%AF%AD%E6%B3%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo语法">hexo语法</span>
+            <span class="post-date" title="2020-07-15 23:34:45">2020/07/15</span>
+        </a>
+        
+        <a  class="All Others "
+           href="/2020/07/15/bat%E6%96%87%E4%BB%B6%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"
+           data-tag="-bat"
+           data-author="" >
+            <span class="post-title" title="bat文件常用语法">bat文件常用语法</span>
+            <span class="post-date" title="2020-07-15 23:13:11">2020/07/15</span>
+        </a>
+        
+        <a  class="All SQL "
+           href="/2020/07/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SQL语法">SQL语法</span>
+            <span class="post-date" title="2020-07-15 20:44:06">2020/07/15</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-bat文件常用语法" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">bat文件常用语法</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Others">Others</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">-bat</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2020-07-15 23:55:31'>2020-07-15 23:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#bat文件常用语法"><span class="toc-text">bat文件常用语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-echo命令"><span class="toc-text">1.echo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①echo-用于显示此命令后的字符。"><span class="toc-text">①echo 用于显示此命令后的字符。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②echo-off-表示此命令后的所有命令都不显示命令本身。"><span class="toc-text">②echo off 表示此命令后的所有命令都不显示命令本身。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#③-与echo-off相似，但只是不显示当行的命令。"><span class="toc-text">③@ 与echo off相似，但只是不显示当行的命令。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-注释"><span class="toc-text">2.注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①rem"><span class="toc-text">①rem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②"><span class="toc-text">②::</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-参数标识符"><span class="toc-text">3.参数标识符  %</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①代表参数"><span class="toc-text">①代表参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②非for语句引用变量"><span class="toc-text">②非for语句引用变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#③for语句要用“-”"><span class="toc-text">③for语句要用“%%”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-call"><span class="toc-text">4. call</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-if"><span class="toc-text">5. if</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①字符串判断"><span class="toc-text">①字符串判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②判断数值相等"><span class="toc-text">②判断数值相等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#④判断某个变量是否已经被赋值，用-if-defined-str-语句"><span class="toc-text">④判断某个变量是否已经被赋值，用 if defined str 语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#⑤-if结合errorlevel使用"><span class="toc-text">⑤ if结合errorlevel使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-goto"><span class="toc-text">6. goto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-for"><span class="toc-text">7. for</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①-f-解析文本读取字符串"><span class="toc-text">①&#x2F;f 解析文本读取字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②-delims"><span class="toc-text">② delims</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#③-tokens"><span class="toc-text">③ tokens</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-rd"><span class="toc-text">8. rd</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#①-rd-d-test"><span class="toc-text">① rd d:\test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#②-rd-s-test"><span class="toc-text">② rd &#x2F;s test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#③-rd-q-s-test"><span class="toc-text">③ rd &#x2F;q &#x2F;s test</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="bat文件常用语法"><a href="#bat文件常用语法" class="headerlink" title="bat文件常用语法"></a>bat文件常用语法</h1><h2 id="1-echo命令"><a href="#1-echo命令" class="headerlink" title="1.echo命令"></a>1.echo命令</h2><h3 id="①echo-用于显示此命令后的字符。"><a href="#①echo-用于显示此命令后的字符。" class="headerlink" title="①echo 用于显示此命令后的字符。"></a>①echo 用于显示此命令后的字符。</h3><blockquote>
+<p>echo Hello World!</p>
+</blockquote>
+<blockquote>
+<p>PAUSE</p>
+</blockquote>
+<p>注：pause是用来暂停的，直到用户输入任意键关闭。</p>
+<p>结果：</p>
+<blockquote>
+<p>E:&gt;echo Hello World!</p>
+</blockquote>
+<blockquote>
+<p>Hello World!</p>
+</blockquote>
+<blockquote>
+<p>E:&gt;PAUSE</p>
+</blockquote>
+<blockquote>
+<p>请按任意键继续. . .</p>
+</blockquote>
+<h3 id="②echo-off-表示此命令后的所有命令都不显示命令本身。"><a href="#②echo-off-表示此命令后的所有命令都不显示命令本身。" class="headerlink" title="②echo off 表示此命令后的所有命令都不显示命令本身。"></a>②echo off 表示此命令后的所有命令都不显示命令本身。</h3><h3 id="③-与echo-off相似，但只是不显示当行的命令。"><a href="#③-与echo-off相似，但只是不显示当行的命令。" class="headerlink" title="③@ 与echo off相似，但只是不显示当行的命令。"></a>③@ 与echo off相似，但只是不显示当行的命令。</h3><p>@echo off 是经常组合放在开头的。</p>
+<p>@echo off</p>
+<p>echo Hello World!</p>
+<p>PAUSE</p>
+<p>结果：</p>
+<p>Hello World!</p>
+<p>请按任意键继续. . .</p>
+<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2.注释"></a>2.注释</h2><h3 id="①rem"><a href="#①rem" class="headerlink" title="①rem"></a>①rem</h3><h3 id="②"><a href="#②" class="headerlink" title="②::"></a>②::</h3><p>@echo off</p>
+<p>echo Hello World!</p>
+<p>rem 我是一个注释</p>
+<p>:: 巧了我也是一个注释</p>
+<p>PAUSE</p>
+<p>结果：</p>
+<p>Hello World!</p>
+<p>请按任意键继续. . .</p>
+<h2 id="3-参数标识符"><a href="#3-参数标识符" class="headerlink" title="3.参数标识符  %"></a>3.参数标识符  %</h2><h3 id="①代表参数"><a href="#①代表参数" class="headerlink" title="①代表参数"></a>①代表参数</h3><p>%[1-9]表示参数，参数是指在运行批处理文件时在文件名后加的以空格（或者Tab）分隔的字符串。变量可以从%0到%9，%0表示批处理命令本身，其它参数字符串用%1到%9顺序表示。</p>
+<p>@echo off</p>
+<p>type %1</p>
+<p>type %2</p>
+<p>pause</p>
+<p>使用cmd，进入到对应目录下：</p>
+<p>E:&gt;test a.txt b.txt</p>
+<p>我是a我是b请按任意键继续. . .</p>
+<p>注：test是我们写入内容的bat文件，a.txt和b.txt分别是当前目录下的两个txt，内容分别为“我是a”和“我是b”。</p>
+<p>或者也可以新创建一个bat文件调用刚才写的bat文件：</p>
+<p>@echo off</p>
+<p>call test a.txt b.txt</p>
+<p>pause</p>
+<h3 id="②非for语句引用变量"><a href="#②非for语句引用变量" class="headerlink" title="②非for语句引用变量"></a>②非for语句引用变量</h3><p>@echo off</p>
+<p>set a=HelloWorld!</p>
+<p>echo %a%</p>
+<p>pause</p>
+<p>注意：“set a=HelloWorld!”这句，由于编程习惯，原意在等号两边加空格，但是这样的话就会出现“ECHO处于关闭状态”的错误了。</p>
+<p>结果：</p>
+<p>HelloWorld!</p>
+<p>请按任意键继续. . .</p>
+<h3 id="③for语句要用“-”"><a href="#③for语句要用“-”" class="headerlink" title="③for语句要用“%%”"></a>③for语句要用“%%”</h3><p>@echo off</p>
+<p>for %%i in (1 2 3 4 5) do echo %%i</p>
+<p>pause</p>
+<p>结果：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>请按任意键继续. . .</p>
+<h2 id="4-call"><a href="#4-call" class="headerlink" title="4. call"></a>4. call</h2><p>①调用另一个bat文件</p>
+<p>@echo off</p>
+<p>echo 调用另一个bat文件：</p>
+<p>call another</p>
+<p>pause</p>
+<p>another.bat:</p>
+<p>@echo off</p>
+<p>echo 我是另一个bat文件</p>
+<p>pause</p>
+<p>结果：</p>
+<p>调用另一个bat文件：</p>
+<p>我是另一个bat文件</p>
+<p>请按任意键继续. . .</p>
+<p>②带参数的</p>
+<p>test.bat:</p>
+<p>@echo off</p>
+<p>echo %0 %1</p>
+<p>pause</p>
+<p>another.bat:</p>
+<p>@echo off</p>
+<p>call test.bat 我是参数</p>
+<p>pause</p>
+<p>运行another.bat，结果：</p>
+<p>test.bat 我是参数</p>
+<p>请按任意键继续. . .</p>
+<p>③call一个应用程序（但一般都用start）</p>
+<p>④call一个标签</p>
+<p>@echo off</p>
+<p>call :b</p>
+<p>start notepad.exe</p>
+<p>exit</p>
+<p>:b</p>
+<p>start b.txt</p>
+<p>结果：</p>
+<p>先打开b.txt，然后打开了记事本。</p>
+<h2 id="5-if"><a href="#5-if" class="headerlink" title="5. if"></a>5. if</h2><p>用于判断，类似C语言的if</p>
+<h3 id="①字符串判断"><a href="#①字符串判断" class="headerlink" title="①字符串判断"></a>①字符串判断</h3><p>if [not] “参数” == “字符串” 待执行的命令</p>
+<p>another.bat:</p>
+<p>@echo off</p>
+<p>call test.bat a</p>
+<p>pause</p>
+<p>test.bat</p>
+<p>@echo off</p>
+<p>if not “%1”==”a” (echo 参数不是a)else (echo 参数是a)</p>
+<p>pause</p>
+<p>注意：判断结束后，要和“（”之间留一个空格，“else”也要和“（”之间留一个空格。</p>
+<p>运行结果：</p>
+<p>参数是a</p>
+<p>请按任意键继续. . .</p>
+<h3 id="②判断数值相等"><a href="#②判断数值相等" class="headerlink" title="②判断数值相等"></a>②判断数值相等</h3><p>@echo off</p>
+<p>if 1 equ 2 (echo 1等于2) else (echo 1不等于2)</p>
+<p>pause</p>
+<p>结果：</p>
+<p>1不等于2</p>
+<p>请按任意键继续. . .</p>
+<p>注：大于不能使用符号“&gt;”，而应该使用GTR。</p>
+<p>EQU - 等于</p>
+<p>NEQ - 不等于</p>
+<p>LSS - 小于</p>
+<p>LEQ - 小于或等于</p>
+<p>GTR - 大于</p>
+<p>GEQ - 大于或等于</p>
+<p>③文件判断</p>
+<p>@echo off</p>
+<p>if exist e:\b.txt (echo e盘下有b.txt) else (echo e盘下没有b.txt)</p>
+<p>pause</p>
+<p>结果：</p>
+<p>e盘下有b.txt</p>
+<p>请按任意键继续. . .</p>
+<h3 id="④判断某个变量是否已经被赋值，用-if-defined-str-语句"><a href="#④判断某个变量是否已经被赋值，用-if-defined-str-语句" class="headerlink" title="④判断某个变量是否已经被赋值，用 if defined str 语句"></a>④判断某个变量是否已经被赋值，用 if defined str 语句</h3><p>@echo off</p>
+<p>set str=HelloWorld!</p>
+<p>if defined str (echo 变量的值为%str%) else (echo 变量没有被赋值)</p>
+<p>pause</p>
+<p>结果：</p>
+<p>变量的值为HelloWorld!</p>
+<p>请按任意键继续. . .</p>
+<h3 id="⑤-if结合errorlevel使用"><a href="#⑤-if结合errorlevel使用" class="headerlink" title="⑤ if结合errorlevel使用"></a>⑤ if结合errorlevel使用</h3><p>@echo off</p>
+<p>xcopy e:\b.txt f:\</p>
+<p>if errorlevel 1 echo 文件拷贝失败</p>
+<p>if errorlevel 0 echo 文件拷贝成功</p>
+<p>pause</p>
+<p>注：返回值必须按照从大到小的顺序排列。</p>
+<p>结果：</p>
+<p>E:\b.txt</p>
+<p>复制了 1 个文件</p>
+<p>文件拷贝成功</p>
+<p>请按任意键继续. . .</p>
+<p>几个常用命令的返回值及其代表的意义：</p>
+<p>diskcomp</p>
+<p>0 盘比较相同</p>
+<p>1 盘比较不同</p>
+<p>2 用户通过ctrl-c中止比较操作</p>
+<p>3 由于致命的错误使比较操作中止</p>
+<p>4 预置错误中止比较</p>
+<p>diskcopy</p>
+<p>0 盘拷贝操作成功</p>
+<p>1 非致命盘读/写错</p>
+<p>2 用户通过ctrl-c结束拷贝操作</p>
+<p>3 因致命的处理错误使盘拷贝中止</p>
+<p>4 预置错误阻止拷贝操作</p>
+<p>format</p>
+<p>0 格式化成功</p>
+<p>3 用户通过ctrl-c中止格式化处理</p>
+<p>4 因致命的处理错误使格式化中止</p>
+<p>5 在提示”proceed with format（y/n）?”下用户键入n结束</p>
+<p>xcopy</p>
+<p>0 成功拷贝文件</p>
+<p>1 未找到拷贝文件</p>
+<p>2 用户通过ctrl-c中止拷贝操作</p>
+<p>4 预置错误阻止文件拷贝操作</p>
+<p>5 拷贝过程中写盘错误</p>
+<h2 id="6-goto"><a href="#6-goto" class="headerlink" title="6. goto"></a>6. goto</h2><p>goto是跳到指定的标签位置</p>
+<p>@echo off</p>
+<p>goto end</p>
+<p>echo 这里是结束标签之前的显示</p>
+<p>:end</p>
+<p>echo 这里是结束标签</p>
+<p>pause</p>
+<p>结果：</p>
+<p>这里是结束标签</p>
+<p>请按任意键继续. . .</p>
+<h2 id="7-for"><a href="#7-for" class="headerlink" title="7. for"></a>7. for</h2><p>（1） /f</p>
+<h3 id="①-f-解析文本读取字符串"><a href="#①-f-解析文本读取字符串" class="headerlink" title="①/f 解析文本读取字符串"></a>①/f 解析文本读取字符串</h3><p>@echo off</p>
+<p>for /f %%i in (歌曲列表.txt) do echo %%i</p>
+<p>pause&gt;nul</p>
+<p>结果：</p>
+<p>序号、歌手名-歌曲名.后缀名</p>
+<p>1、徐秉龙/桃十五-空心.MP3</p>
+<p>2、是阿涵啊-不断电.mp3</p>
+<p>3、河豚-二号位.MP3</p>
+<p>4、原·味-褐瞳.lrc</p>
+<p>5、徐薇-空心.mp3</p>
+<p>可以显示文件的内容。如果去掉“/f”，并且把“歌曲列表.txt”改成“*.txt”，就可以搜索当前目录下txt文件并显示文件名：<br>@echo off</p>
+<p>for %%i in (*.txt) do echo %%i<br>pause&gt;nul</p>
+<p>结果：</p>
+<p>b.txt</p>
+<p>歌曲列表.txt</p>
+<h3 id="②-delims"><a href="#②-delims" class="headerlink" title="② delims"></a>② delims</h3><p>做分隔符使用，只会保留分隔符之前的内容。</p>
+<p>@echo off</p>
+<p>for /f “delims=-“ %%i in (歌曲列表.txt) do echo %%i</p>
+<p>pause&gt;nul</p>
+<p>结果：</p>
+<p>序号、歌手名</p>
+<p>1、徐秉龙/桃十五</p>
+<p>2、是阿涵啊</p>
+<p>3、河豚</p>
+<p>4、原·味</p>
+<p>5、徐薇</p>
+<p>注：若要填入多个分隔符，则写在等号后就好，中间无需加空格</p>
+<h3 id="③-tokens"><a href="#③-tokens" class="headerlink" title="③ tokens"></a>③ tokens</h3><p>选定分割之后的内容。</p>
+<p>@echo off</p>
+<p>for /f “tokens=1,2 delims=、.” %%i in (歌曲列表.txt) do echo %%i %%j</p>
+<p>pause&gt;nul</p>
+<p>结果：</p>
+<p>序号 歌手名-歌曲名</p>
+<p>1 徐秉龙/桃十五-空心</p>
+<p>2 是阿涵啊-不断电</p>
+<p>3 河豚-二号位</p>
+<p>4 原·味-褐瞳</p>
+<p>5 徐薇-空心</p>
+<p>说明：</p>
+<p>tokens=有时表示提取全部。</p>
+<p>tokens=m表示提取第m列。</p>
+<p>tokens=m,n表示提取第m列和第n列。</p>
+<p>tokens=m-n表示提取第m列至第n列。</p>
+<p>Tokens=<em>表示删除每行前面的空格。忽略行首的所有空格。<br>tokens=m</em>提取第m列以后的所有字符，星号表示剩余的字符。</p>
+<p>tokens=m,*提取第m列以后的所有字符，星号表示剩余的字符。<br>“%%i %%j”对应于“token”后面的列数。有多少列就要有多少个输出变量，并且各变量中的字母存在先后顺序。</p>
+<p>（2） /L<br>/L参数是以增量形式从开始到结束的一个数字序列的迭代数值范围。</p>
+<p>@echo off</p>
+<p>for /l %%i in (1,1,5) do @echo %%i</p>
+<p>pause</p>
+<p>结果：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>请按任意键继续. . .</p>
+<h2 id="8-rd"><a href="#8-rd" class="headerlink" title="8. rd"></a>8. rd</h2><p>删除文件夹</p>
+<h3 id="①-rd-d-test"><a href="#①-rd-d-test" class="headerlink" title="① rd d:\test"></a>① rd d:\test</h3><p>只能删除空的文件夹，否则会提示：目录不是空的。</p>
+<h3 id="②-rd-s-test"><a href="#②-rd-s-test" class="headerlink" title="② rd /s test"></a>② rd /s test</h3><p>能达到删除文件夹的作用，但是会询问是否确认(Y/N)?</p>
+<h3 id="③-rd-q-s-test"><a href="#③-rd-q-s-test" class="headerlink" title="③ rd /q /s test"></a>③ rd /q /s test</h3><p>安静模式，带 /S 删除目录树时不要求确认。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论:) </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2020 Bo
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
