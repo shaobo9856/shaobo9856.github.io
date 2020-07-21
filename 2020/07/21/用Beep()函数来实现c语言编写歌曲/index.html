@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
+  <title>用Beep()函数来实现c语言编写歌曲 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <meta name="description" content="用Beep()函数来实现c语言编写歌曲 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
@@ -51,7 +51,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -294,12 +294,51 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-用Beep()函数来实现c语言编写歌曲" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-B-Blog"><span class="toc-text">Why B-Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对本博客系统的定位"><span class="toc-text">对本博客系统的定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Blog系统统计数据"><span class="toc-text">B-Blog系统统计数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">用Beep()函数来实现c语言编写歌曲</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Others">Others</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2020-07-21 11:41:21'>2020-07-21 11:38</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用Beep-函数来实现c语言编写歌曲"><span class="toc-text">用Beep()函数来实现c语言编写歌曲</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -312,18 +351,41 @@
     }
 </style>
 </div>
-            <h1 id="Why-B-Blog"><a href="#Why-B-Blog" class="headerlink" title="Why B-Blog"></a>Why B-Blog</h1><h2 id="对本博客系统的定位"><a href="#对本博客系统的定位" class="headerlink" title="对本博客系统的定位"></a>对本博客系统的定位</h2><p>B-Blog作为技术文章的总结站点，日常看过的有价值的文章放在这个系统上，方便日后重复翻阅。<br>同时又是主网站的分系统。 </p>
-<h2 id="B-Blog系统统计数据"><a href="#B-Blog系统统计数据" class="headerlink" title="B-Blog系统统计数据"></a>B-Blog系统统计数据</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>上。</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="用Beep-函数来实现c语言编写歌曲"><a href="#用Beep-函数来实现c语言编写歌曲" class="headerlink" title="用Beep()函数来实现c语言编写歌曲"></a>用Beep()函数来实现c语言编写歌曲</h1><p>Beep()函数是一个可以控制扬声器发出提示音的函数,包含在windows.h内.实际上,所有用到Sleep()函数的地方,都可以用这个,待后面细细说来。</p>
+<p>要准备什么?<br>一首歌的所有音符所对应的音高,音值。<br>将这些信息转换为音符频率,持续时间<br>怎样做?<br>首先,让我们知道,什么是音<br>  音是由于物体的震动而产生的.在自然界中能为我们人的听觉所感受的音是非常多的,但并不是所有的音都可以作为音乐的材料.在音乐中所使用的音,是人们在长期的生产斗争和阶级斗争中为了表现自己的生活和思想感情而特意挑选出来的.这些音被组成为一个固定的体系,用来表现音乐思想和塑造音乐形象.<br>  音有高低,强弱,长短,音色等四种性质.<br>  音的高低是由于物体在一定时间内振动次数(频率)而决定的.振动的次数多,音则高;振动次数少,音则低.<br>  音的长短是由于音的延续时间的不同而决定的.音的延续时间长,音则长;音的延续时间短,音则短.<br>  音的强弱是由于振幅(音的振动范围的幅度)的大小而决定的.振幅大,音则强;振幅小,音则弱.<br>  音色则由于发音体的性质,形状及其泛音的多少等而不同.<br>  音的以上四种性质,在音乐表现中都是非常重要的,但音的高低和长短则具有更为重大的意义.试以《社会主义好》这首歌为例,不管你用人声来演唱或用乐器来演奏,用小声唱或是大声唱,虽然音的强弱以音色都有了变化,仍然很容易辨认出这支旋律.但是,假如将这首歌的音高或音值加以改变的话,则音乐形象就会立即受到严重的破坏.因此,不管创作也好,演奏演唱也好,对音高和音值应加以特别的注意.<br>      –&gt;&gt;引用自《音乐理论基础》李重光编,第1页</p>
+<p>在上面提到的四种性质中,无可置疑,最重要的是音高和音值,这正是Beep函数的两个参数.<br>准备曲谱,这里我不会做赘述,这个是与编程本身相差甚远的知识面,需要扒谱的基础.<br>  扒谱可以获取音高,bpm,演奏节拍的学习的信息,学起来也不难,这里推荐,b站善哉君的金坷垃制作技术的P2,P3的一些内容.</p>
+<p>转为机器可以看懂的程序.<br>‘’’C<br>#include&lt;stdio.h&gt;<br>#include&lt;windows.h&gt;</p>
+<p>#define K 0//这个频率0，就是不响，作为空拍 </p>
+<p>//以下的所有表示音符的符号均来自fl studio 14 的fl keys的标注，或许和一般钢琴的标注不一样 。<br>//只有三个八度的音高频率 ，因为一般人声可以达到的频率大概都会落在这些里面<br>#define C4 523<br>#define C#4 554<br>#define D4 588<br>#define D#4 623<br>#define E4 660<br>#define F4 700<br>#define F#4 742<br>#define G4 786<br>#define G#4 833<br>#define A4 884<br>#define A#4 936<br>#define B4 992</p>
+<p>#define C5 1046<br>#define C#5 1108<br>#define D5 1176<br>#define D#5 1246<br>#define E5 1320<br>#define F5 1400<br>#define F#5 1484<br>#define G5 1572<br>#define G#5 1666<br>#define A5 1768<br>#define A#5 1872<br>#define B5 1984</p>
+<p>#define C6 2092<br>#define C#6 2216<br>#define D6 2352<br>#define D#6 2492<br>#define E6 2640<br>#define F6 2800<br>#define F#6 2968<br>#define G6 3144<br>#define G#6 3332<br>#define A6 3536<br>#define A#6 3744<br>#define B6 3968<br>#define P 125   //折合bpm==120，原bpm为105，此处取了个近似值 </p>
+<p>typedef struct<br>{<br>    int frequency;<br>    int duration;<br>}PU;<br>    //以下谱子，正是《社会主义好》的一段<br>PU t[]={B5,1,B5,2,B5,1,D6,2,B5,5,A5,2,G5,1,E5,2,G5,1,A5,2,B5,2,K,5,B5,1,B5,2,B5,1,D6,2,E6,4,D6,3,E5,1<br>,E5,2,E5,1,G5,2,A5,2,K,5,B5,3,A5,1,G5,3,G5,2,E5,1,D5,3,B5,2,D6,1,B5,2,A5,1,G5,2,A5,1,G5,2,A5,2,B5,3,E5,<br>3,G5,1,D5,2,K,5,B5,2,D6,1,B5,1,D6,2,E6,3,E6,2,D6,1,E6,5,B5,2,A5,3,B5,1,E6,3,D6,3,B5,3,A5,3,K,1,E6,2,D6,<br>1,B5,2,A5,1,G5,4,K,3,E6,2,D6,1,B5,2,A5,1,G5,4,};<br>int main()<br>{<br>    int i;<br>    //结构体数组的长度sizeof(t)/sizeof(PU)得到，总结构体数组大小 / 单个结构体大小<br>    for (i=0; i&lt;sizeof(t)/sizeof(PU); i++)<br>        Beep(t[i].frequency,t[i].duration*P);<br>}</p>
+<p>‘’’</p>
+<p>以此类推,你可以搞出来自己想要的曲子,只需要改变谱子,bpm相关的部分,是不是不难呢?<br>至于为什么它可以一定程度上取代Sleep(),想必也不用我多说,直接用起来吧.</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论:) </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -332,11 +394,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

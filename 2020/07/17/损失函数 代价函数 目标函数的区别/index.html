@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>损失函数 代价函数 目标函数的区别 | Hexo</title>
+  <meta name="keywords" content=" -ML ">
+  <meta name="description" content="损失函数 代价函数 目标函数的区别 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
@@ -51,7 +51,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -294,12 +294,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-损失函数 代价函数 目标函数的区别" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-B-Blog"><span class="toc-text">Why B-Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对本博客系统的定位"><span class="toc-text">对本博客系统的定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Blog系统统计数据"><span class="toc-text">B-Blog系统统计数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">损失函数 代价函数 目标函数的区别</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="DS">DS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">-ML</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2020-07-17 15:20:45'>2020-07-17 15:10</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#损失函数-代价函数-目标函数的区别"><span class="toc-text">损失函数 代价函数 目标函数的区别</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -312,18 +358,39 @@
     }
 </style>
 </div>
-            <h1 id="Why-B-Blog"><a href="#Why-B-Blog" class="headerlink" title="Why B-Blog"></a>Why B-Blog</h1><h2 id="对本博客系统的定位"><a href="#对本博客系统的定位" class="headerlink" title="对本博客系统的定位"></a>对本博客系统的定位</h2><p>B-Blog作为技术文章的总结站点，日常看过的有价值的文章放在这个系统上，方便日后重复翻阅。<br>同时又是主网站的分系统。 </p>
-<h2 id="B-Blog系统统计数据"><a href="#B-Blog系统统计数据" class="headerlink" title="B-Blog系统统计数据"></a>B-Blog系统统计数据</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>上。</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="损失函数-代价函数-目标函数的区别"><a href="#损失函数-代价函数-目标函数的区别" class="headerlink" title="损失函数 代价函数 目标函数的区别"></a>损失函数 代价函数 目标函数的区别</h1><blockquote>
+<p>Loss Function 是定义在单个样本上的，算的是一个样本的误差。</p>
+</blockquote>
+<blockquote>
+<p>Cost Function 是定义在整个训练集上的，是所有样本误差的平均，也就是损失函数的平均。</p>
+</blockquote>
+<blockquote>
+<p>Object Function（目标函数 ）定义为：Cost Function + 正则化项。</p>
+</blockquote>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论:) </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -332,11 +399,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
